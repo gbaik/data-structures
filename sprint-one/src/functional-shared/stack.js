@@ -21,10 +21,10 @@ stackMethods.push = function (value) {
 };
 
 stackMethods.pop = function () {
-  var whatever = this.storage[this.count]; 
+  var popValue = this.storage[this.count]; 
   this.count--;
   this.sizeInt--;
-  return whatever;
+  return popValue;
 };
 
 stackMethods.size = function () {

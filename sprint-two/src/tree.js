@@ -2,8 +2,9 @@ var Tree = function(value) {
   var newTree = {};
   newTree.value = value;
   newTree.children = [];
-  // fix me
+
   _.extend(newTree, treeMethods);
+
   return newTree;
 };
 
@@ -15,29 +16,16 @@ treeMethods.addChild = function(value) {
 };
 
 treeMethods.contains = function(target) {
-  debugger
-  if (this.children === target) {
+  if (this.value === target) {
     return true;
-  } else {
-    for (var i = 0; i < this.children.length; i++) {
-      this.children[i].contains;
-    }
-    return false;
   }
-  // if (this.value === target) {
-  //   return true;
-  // } else {
-  //   childValue(target, this.children);
-  // }
 
-  // function childValue (target, familyTree) {
-  //   if (familyTree.length !== undefined) {
-  //     for (var i = 0; i < familyTree.length; i++) {
-  //       childValue(target, familyTree.children[i]);
-  //     }
-  //   }
-  //   return false;
-  // };
+  for (var i = 0; i < this.children.length; i++) {
+    if (this.children[i].contains(target)) {
+      return true;
+    }
+  }
+  return false;
 };
 
 
@@ -45,3 +33,4 @@ treeMethods.contains = function(target) {
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+

@@ -1,8 +1,8 @@
 var BinarySearchTree = function(value) {
   var newTree = Object.create(binarySearchTree);
   newTree.root = value;
-  newTree.left = null; //a BST where all the values are lower than its current value (num)
-  newTree.right = null; //a BST where all the values are higher than its current value (num)
+  newTree.left = {}; //a BST where all the values are lower than its current value (num)
+  newTree.right = {}; //a BST where all the values are higher than its current value (num)
 
   return newTree;
 };
@@ -12,21 +12,25 @@ var binarySearchTree = {};
 binarySearchTree.insert = function (value) {
   //accepts a value (the argument)
   //places it in the binarySearchTree in the correct position
+  debugger;
+  console.log('Left tree: ', this.left);
+
+  var childTree = BinarySearchTree(value);  
+  
   if (this.root > value) {
-    if (this.left === null) {
-      this.left = value;
+    if (this.left.length === 0) {
+      this.left.push(value);
     } else {
-    this.left[0].insert(value);
-}
+      this.left.0.push(childTree);
+    }
   } else if (this.root < value) {
-    if (this.right === null) {
+    if (this.right.length === 0) {
       this.right = value;
     } else {
-    this.right[0].insert(value);
-}
-  }
-  
-  console.log(this);
+      this.right.push(childTree);
+    }
+  } 
+  console.log('Top tree: ', this);
 };
 
 binarySearchTree.contains = function (value) {

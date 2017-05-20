@@ -12,6 +12,21 @@ var binarySearchTree = {};
 binarySearchTree.insert = function (value) {
   //accepts a value (the argument)
   //places it in the binarySearchTree in the correct position
+  if (this.root > value) {
+    if (this.left === null) {
+      this.left = value;
+    } else {
+    this.left[0].insert(value);
+}
+  } else if (this.root < value) {
+    if (this.right === null) {
+      this.right = value;
+    } else {
+    this.right[0].insert(value);
+}
+  }
+  
+  console.log(this);
 };
 
 binarySearchTree.contains = function (value) {

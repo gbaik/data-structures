@@ -1,26 +1,27 @@
 var BinarySearchTree = function(value) {
-var obj = Object.create(stackMethods);
-  obj.left = {}; //a BST where all the values are lower than its current value (num)
-  obj.right = {}; //a BST where all the values are higher than its current value (num)
+  var newTree = Object.create(binarySearchTree);
+  newTree.root = value;
+  newTree.left = null; //a BST where all the values are lower than its current value (num)
+  newTree.right = null; //a BST where all the values are higher than its current value (num)
 
-  return obj;
+  return newTree;
 };
 
-var stackMethods = {};
+var binarySearchTree = {};
 
-stackMethods.insert = function (value) {
+binarySearchTree.insert = function (value) {
   //accepts a value (the argument)
-  //places it in the tree in the correct position
+  //places it in the binarySearchTree in the correct position
 };
 
-stackMethods.contains = function (value) {
+binarySearchTree.contains = function (value) {
   //accepts a value (the argument)
-  //return whether or not the value is contained in the tree (boolean)
+  //return whether or not the value is contained in the binarySearchTree (boolean)
 };
 
-stackMethods.depthFirstLog = function (callback) {
+binarySearchTree.depthFirstLog = function (callback) {
   //accepts a callback (the argument)
-  //executes it on very value in the tree
+  //executes it on very value in the binarySearchTree
 };
 
 

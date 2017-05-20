@@ -1,49 +1,30 @@
 var BinarySearchTree = function(value) {
-  var someInstance = {};
-  someInstance.array = [];
-  someInstance.start = someInstance.start || 0;
-  someInstance.end = someInstance.end || someInstance.array.length - 1;  
-  someInstance.midpoint = Math.floor((someInstance.end + someInstance.start) / 2);
-//A .left property, a binary search tree (BST) where all values are lower than than it the current value.
+var obj = Object.create(stackMethods);
+  obj.left = {}; //a BST where all the values are lower than its current value (num)
+  obj.right = {}; //a BST where all the values are higher than its current value (num)
 
-  someInstance.left = function (whatever) {
-    if (storedobject = undefined) {
-      store whatever as the first object
-    } else {
-      whatever > storedobject['whatever' - 1]
-    }
-  }
-  someInstance.right = someInstance.array.slice(someInstance.midpoint, someInstance.end);
-  
-  _.extend(someInstance, binaryMethods);
-  
-  return someInstance;
-};
-  
-var binaryMethods = {};
-
-binaryMethods.insert = function (insertValue) {
-  this.left(insertValue);
+  return obj;
 };
 
-binaryMethods.contains = function (target) {
-  if (this.midpoint === target) {
-    return this.midpoint;
-  } else if (this.array[this.midpoint + 1] - target > this.array[this.midpoint - 1] - target) {
-    this.start = this.midpoint; 
-    contains(target);
-  } else { 
-    this.end = this.midpoint;
-    contains(target);
-  }
+var stackMethods = {};
+
+stackMethods.insert = function (value) {
+  //accepts a value (the argument)
+  //places it in the tree in the correct position
 };
 
-binaryMethods.depthFirstLog = function () {
-  
+stackMethods.contains = function (value) {
+  //accepts a value (the argument)
+  //return whether or not the value is contained in the tree (boolean)
 };
+
+stackMethods.depthFirstLog = function (callback) {
+  //accepts a callback (the argument)
+  //executes it on very value in the tree
+};
+
 
 
 /*
  * Complexity: What is the time complexity of the above functions?
  */
-
